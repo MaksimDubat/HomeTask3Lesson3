@@ -34,6 +34,9 @@
                 case "5":
                     FifthTaskMethod();
                     break;
+                case "6":
+                    SixthTaskMethod();
+                    break;
 
             }
             FirstTaskMethod();
@@ -176,6 +179,41 @@
                     Console.WriteLine("Error, try next, the area of numbers is 7");
                 } while (Console.ReadLine()=="all");
 
+            }
+            SixthTaskMethod();
+            static void SixthTaskMethod() 
+            {
+                Console.WriteLine("Choose the maths operation:\n");
+                Console.WriteLine("1) summ\n");
+                Console.WriteLine("2) subtraction\n");
+                Console.WriteLine("3) division\n");
+                Console.WriteLine("4) multiplication\n");
+                Console.WriteLine("5) percentage of number\n");
+                Console.WriteLine("6) square root of a number\n");
+                Console.WriteLine("0) exit");
+                var mathOperation = Console.ReadLine();
+                switch (mathOperation) 
+                {
+                    case "1":
+                        Console.WriteLine("Summ of numbers. If you wan to end input and see the sum press '='\n") ;
+                        List<double> list = new List<double>();
+                        Console.WriteLine("Input numbers to summ:");
+                        do
+                        {
+                        double variable = Convert.ToDouble(Console.ReadLine());
+                        list.Add(variable);
+                        } while (Console.ReadLine() =="=");
+                        double sum=0;
+                        for(int i = 0; i<list.Count; i++)
+                        {
+                            sum += list[i];
+                        }
+                        Console.WriteLine("Total is: "+sum);
+                        break;
+                    case "2":
+                        Console.WriteLine("Subtraction");
+                        break;
+                }
             }
         }
     }
