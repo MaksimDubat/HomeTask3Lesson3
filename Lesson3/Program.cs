@@ -1,4 +1,4 @@
-﻿namespace Lesson3
+﻿]namespace Lesson3
 {
     internal class Program
     {
@@ -196,14 +196,16 @@
                 switch (mathOperation)
                 {
                     case "1":
-                        Console.WriteLine("Summ of numbers. If you wan to end input and see the result press '='\n");
-                        List<double> list = new List<double>();
+
+                        Console.WriteLine("Summ of numbers. Input amount of nubers.\n");
+                        int amount = Convert.ToInt32(Console.ReadLine());
+                        List<double> list = new List<double>(amount);
                         Console.WriteLine("Input numbers to summ:");
-                        do
+                        for (int i = 0; i < amount; i++)
                         {
                             double variable = Convert.ToDouble(Console.ReadLine());
                             list.Add(variable);
-                        } while (Console.ReadLine() == "=");
+                        }
                         double sum = 0;
                         for (int i = 0; i < list.Count; i++)
                         {
@@ -212,14 +214,15 @@
                         Console.WriteLine("Total is: " + sum);
                         break;
                     case "2":
-                        Console.WriteLine("Subtraction of numbers. If you wan to end input and see the result press '='\n");
-                        List<double> list2 = new List<double>();
+                        Console.WriteLine("Subtraction of numbers Input amount of numbers.\n");
+                        int amount2 = Convert.ToInt32(Console.ReadLine());
+                        List<double> list2 = new List<double>(amount2);
                         Console.WriteLine("Input numbers to subtract:");
-                        do
+                        for (int i = 0; i < amount2; i++)
                         {
                             double variable = Convert.ToDouble(Console.ReadLine());
                             list2.Add(variable);
-                        } while (Console.ReadLine() == "=");
+                        }
                         double sub = 0;
                         for (int i = 0; i < list2.Count; i++)
                         {
@@ -228,31 +231,34 @@
                         Console.WriteLine("Total is: " + sub);
                         break;
                     case "3":
-                        Console.WriteLine("Division of numbers. If you wan to end input and see the result press '='\n");
-                        List<double> list3 = new List<double>();
+                        Console.WriteLine("Division of numbers. Input amount of numbers.\n");
+                        int amount3 = Convert.ToInt32(Console.ReadLine());
+                        List<double> list3 = new List<double>(amount3);
                         Console.WriteLine("Input numbers to divide:");
-                        do
+                        for (int i = 0; i < amount3; i++)
                         {
                             double variable = Convert.ToDouble(Console.ReadLine());
                             list3.Add(variable);
-                        } while (Console.ReadLine() == "=");
-                        double division = 0;
+                        }
+                        double division = list3[0];
                         for (int i = 0; i < list3.Count; i++)
                         {
-                            division /= list3[i];
+                            if (list3[i] != 0)
+                                division /= list3[i];
                         }
                         Console.WriteLine("Total is: " + division);
                         break;
                     case "4":
-                        Console.WriteLine("Multiplication of numbers. If you wan to end input and see the result press '='\n");
-                        List<double> list4 = new List<double>();
+                        Console.WriteLine("Multiplication of numbers.\n");
+                        int amount4 = Convert.ToInt32(Console.ReadLine());
+                        List<double> list4 = new List<double>(amount4);
                         Console.WriteLine("Input numbers to multiplicate:");
-                        do
+                        for (int i = 0; i < amount4; i++)
                         {
                             double variable = Convert.ToDouble(Console.ReadLine());
                             list4.Add(variable);
-                        } while (Console.ReadLine() == "=");
-                        double multip = 0;
+                        }
+                        double multip = list4[0];
                         for (int i = 0; i < list4.Count; i++)
                         {
                             multip *= list4[i];
@@ -260,9 +266,9 @@
                         Console.WriteLine("Total is: " + multip);
                         break;
                     case "5":
-                        Console.WriteLine("percentage of numbers. If you wan to end input and see the result press '='\n");
+                        Console.WriteLine("percentage of numbers.\n");
                         List<double> list5 = new List<double>();
-                        double percent = 0;
+                        double percent = list5[0];
                         Console.WriteLine("Input numbers to percent:");
                         do
                         {
@@ -278,15 +284,16 @@
                         Console.WriteLine("Total is: " + percent);
                         break;
                     case "6":
-                        Console.WriteLine("Square root of numbers. If you wan to end input and see the result press '='\n");
-                        List<double> list6 = new List<double>();
+                        Console.WriteLine("Square root of numbers. Input amount of numbers\n");
+                        int amount6 = Convert.ToInt32(Console.ReadLine());
+                        List<double> list6 = new List<double>(amount6);
                         Console.WriteLine("Input numbers to find square root:");
-                        do
+                        for (int i = 0; i < list6.Count; i++)
                         {
                             double variable = Convert.ToDouble(Console.ReadLine());
                             list6.Add(variable);
-                        } while (Console.ReadLine() == "=");
-                        double square = 0;
+                        }
+                        double square = list6[0];
                         for (int i = 0; i < list6.Count; i++)
                         {
                             square = Math.Sqrt(list6[i]);
