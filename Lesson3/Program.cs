@@ -241,7 +241,7 @@
                             list3.Add(variable);
                         }
                         double division = list3[0];
-                        for (int i = 0; i < list3.Count; i++)
+                        for (int i = 1; i < list3.Count; i++)
                         {
                             if (list3[i] != 0)
                                 division /= list3[i];
@@ -259,7 +259,7 @@
                             list4.Add(variable);
                         }
                         double multip = list4[0];
-                        for (int i = 0; i < list4.Count; i++)
+                        for (int i = 1; i < list4.Count; i++)
                         {
                             multip *= list4[i];
                         }
@@ -276,7 +276,7 @@
                             list5.Add(variable);
                             Console.WriteLine("input number to find how many % in numbers in list:");
                             var part = Convert.ToDouble(Console.ReadLine());
-                            for (int i = 0; i < list5.Count; i++)
+                            for (int i = 1; i < list5.Count; i++)
                             {
                                 percent = (list5[i] * part) / 100;
                             }
@@ -294,7 +294,7 @@
                             list6.Add(variable);
                         }
                         double square = list6[0];
-                        for (int i = 0; i < list6.Count; i++)
+                        for (int i = 1; i < list6.Count; i++)
                         {
                             square = Math.Sqrt(list6[i]);
                         }
