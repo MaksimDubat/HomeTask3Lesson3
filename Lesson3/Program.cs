@@ -14,10 +14,10 @@
             Console.WriteLine("6) Calculator.\n");
             Console.WriteLine("0 exit.\n");
             var selection = Console.ReadLine();
-            switch (selection) 
+            switch (selection)
             {
                 case "0":
-                    default:
+                default:
                     break;
                 case "1":
                     FirstTaskMethod();
@@ -79,10 +79,10 @@
                 Console.WriteLine("Switch-case program displaying the name of the season by number of the months.\n");
                 var monthSelection = Console.ReadLine();
                 Console.WriteLine("Choose the month (for example 1)");
-                switch (monthSelection) 
+                switch (monthSelection)
                 {
                     case "0":
-                        default:
+                    default:
                         break;
                     case "1":
                         Console.WriteLine("Its winter. January.");
@@ -135,7 +135,7 @@
                     if (number % 2 == 0)
                         Console.WriteLine("The number is even");
                     else Console.WriteLine("The number is odd");
-                } while (Console.ReadLine()=="0");
+                } while (Console.ReadLine() == "0");
             }
             FourthTaskMetod();
             static void FourthTaskMetod()
@@ -151,7 +151,7 @@
                         Console.WriteLine($"{temperature} is normal");
                     else if (temperature > -20)
                         Console.WriteLine($"{temperature} is cold");
-                } while (Console.ReadLine()=="all");
+                } while (Console.ReadLine() == "all");
             }
             FifthTaskMethod();
             static void FifthTaskMethod()
@@ -159,29 +159,30 @@
                 Console.WriteLine("Program for rainbow color choose.\n");
                 Console.WriteLine("Input the number that match the color in rainbow:\n");
                 Console.WriteLine("Write 'all' to end the programm\n");
-                do { 
-                var color = Convert.ToInt32(Console.ReadLine());
-                if (color == 1)
-                    Console.WriteLine("Color is red");
-                else if (color == 2)
-                    Console.WriteLine("Color is orange");
-                else if (color == 3)
-                    Console.WriteLine("Color is yellow");
-                else if (color == 4)
-                    Console.WriteLine("Color is green");
-                else if (color == 5)
-                    Console.WriteLine("Color is light blue");
-                else if (color == 6)
-                    Console.WriteLine("Color is dark blue");
-                else if (color == 7)
-                    Console.WriteLine("Color is purple");
-                else
-                    Console.WriteLine("Error, try next, the area of numbers is 7");
-                } while (Console.ReadLine()=="all");
+                do
+                {
+                    var color = Convert.ToInt32(Console.ReadLine());
+                    if (color == 1)
+                        Console.WriteLine("Color is red");
+                    else if (color == 2)
+                        Console.WriteLine("Color is orange");
+                    else if (color == 3)
+                        Console.WriteLine("Color is yellow");
+                    else if (color == 4)
+                        Console.WriteLine("Color is green");
+                    else if (color == 5)
+                        Console.WriteLine("Color is light blue");
+                    else if (color == 6)
+                        Console.WriteLine("Color is dark blue");
+                    else if (color == 7)
+                        Console.WriteLine("Color is purple");
+                    else
+                        Console.WriteLine("Error, try next, the area of numbers is 7");
+                } while (Console.ReadLine() == "all");
 
             }
             SixthTaskMethod();
-            static void SixthTaskMethod() 
+            static void SixthTaskMethod()
             {
                 Console.WriteLine("Choose the maths operation:\n");
                 Console.WriteLine("1) summ\n");
@@ -192,27 +193,110 @@
                 Console.WriteLine("6) square root of a number\n");
                 Console.WriteLine("0) exit");
                 var mathOperation = Console.ReadLine();
-                switch (mathOperation) 
+                switch (mathOperation)
                 {
                     case "1":
-                        Console.WriteLine("Summ of numbers. If you wan to end input and see the sum press '='\n") ;
+                        Console.WriteLine("Summ of numbers. If you wan to end input and see the result press '='\n");
                         List<double> list = new List<double>();
                         Console.WriteLine("Input numbers to summ:");
                         do
                         {
-                        double variable = Convert.ToDouble(Console.ReadLine());
-                        list.Add(variable);
-                        } while (Console.ReadLine() =="=");
-                        double sum=0;
-                        for(int i = 0; i<list.Count; i++)
+                            double variable = Convert.ToDouble(Console.ReadLine());
+                            list.Add(variable);
+                        } while (Console.ReadLine() == "=");
+                        double sum = 0;
+                        for (int i = 0; i < list.Count; i++)
                         {
                             sum += list[i];
                         }
-                        Console.WriteLine("Total is: "+sum);
+                        Console.WriteLine("Total is: " + sum);
                         break;
                     case "2":
-                        Console.WriteLine("Subtraction");
+                        Console.WriteLine("Subtraction of numbers. If you wan to end input and see the result press '='\n");
+                        List<double> list2 = new List<double>();
+                        Console.WriteLine("Input numbers to subtract:");
+                        do
+                        {
+                            double variable = Convert.ToDouble(Console.ReadLine());
+                            list2.Add(variable);
+                        } while (Console.ReadLine() == "=");
+                        double sub = 0;
+                        for (int i = 0; i < list2.Count; i++)
+                        {
+                            sub -= list2[i];
+                        }
+                        Console.WriteLine("Total is: " + sub);
                         break;
+                    case "3":
+                        Console.WriteLine("Division of numbers. If you wan to end input and see the result press '='\n");
+                        List<double> list3 = new List<double>();
+                        Console.WriteLine("Input numbers to divide:");
+                        do
+                        {
+                            double variable = Convert.ToDouble(Console.ReadLine());
+                            list3.Add(variable);
+                        } while (Console.ReadLine() == "=");
+                        double division = 0;
+                        for (int i = 0; i < list3.Count; i++)
+                        {
+                            division /= list3[i];
+                        }
+                        Console.WriteLine("Total is: " + division);
+                        break;
+                    case "4":
+                        Console.WriteLine("Multiplication of numbers. If you wan to end input and see the result press '='\n");
+                        List<double> list4 = new List<double>();
+                        Console.WriteLine("Input numbers to multiplicate:");
+                        do
+                        {
+                            double variable = Convert.ToDouble(Console.ReadLine());
+                            list4.Add(variable);
+                        } while (Console.ReadLine() == "=");
+                        double multip = 0;
+                        for (int i = 0; i < list4.Count; i++)
+                        {
+                            multip *= list4[i];
+                        }
+                        Console.WriteLine("Total is: " + multip);
+                        break;
+                    case "5":
+                        Console.WriteLine("percentage of numbers. If you wan to end input and see the result press '='\n");
+                        List<double> list5 = new List<double>();
+                        double percent = 0;
+                        Console.WriteLine("Input numbers to percent:");
+                        do
+                        {
+                            double variable = Convert.ToDouble(Console.ReadLine());
+                            list5.Add(variable);
+                            Console.WriteLine("input number to find how many % in numbers in list:");
+                            var part = Convert.ToDouble(Console.ReadLine());
+                            for (int i = 0; i < list5.Count; i++)
+                            {
+                                percent = (list5[i] * part) / 100;
+                            }
+                        } while (Console.ReadLine() == "=");
+                        Console.WriteLine("Total is: " + percent);
+                        break;
+                    case "6":
+                        Console.WriteLine("Square root of numbers. If you wan to end input and see the result press '='\n");
+                        List<double> list6 = new List<double>();
+                        Console.WriteLine("Input numbers to find square root:");
+                        do
+                        {
+                            double variable = Convert.ToDouble(Console.ReadLine());
+                            list6.Add(variable);
+                        } while (Console.ReadLine() == "=");
+                        double square = 0;
+                        for (int i = 0; i < list6.Count; i++)
+                        {
+                            square = Math.Sqrt(list6[i]);
+                        }
+                        Console.WriteLine("Total is: " + square);
+                        break;
+                    case "0":
+                    default:
+                        break;
+
                 }
             }
         }
