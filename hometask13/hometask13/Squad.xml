@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Squad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <field1>firstField_File1</field1>
+  <field2>secondField_File1</field2>
+  <field3>1</field3>
+</Squad>
